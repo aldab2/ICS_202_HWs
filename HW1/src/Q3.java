@@ -112,7 +112,7 @@ public class Q3 {
 		owners.get(1).pets.add(pets.get(pets.size() - 1));
 		pets.add(new ReptilePet("Snake", owners.get(2), "ScaryDude", 9, " Completly Anthing Even Humans!",true,false));
 		owners.get(2).pets.add(pets.get(pets.size() - 1));
-		pets.add(new ReptilePet("Turtle", owners.get(1), "Ninja", 1, "bread",false,false));
+		pets.add(new ReptilePet("Turtle", owners.get(1), "NinjaTurtle", 1, "bread",false,false));
 		owners.get(1).pets.add(pets.get(pets.size() - 1));
 
 
