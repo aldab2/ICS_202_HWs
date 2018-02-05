@@ -1,5 +1,7 @@
-//Abdullah Barnawi
-// ID#:201549390
+/*
+ * Name : Abdullah Barnawi
+ * ID#:201549390
+ */
 
 import java.util.Scanner;
 
