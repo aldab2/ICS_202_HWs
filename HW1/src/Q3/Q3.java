@@ -355,7 +355,7 @@ abstract class Pet {
 		this.food = food;
 	}
 
-	public int getAge() {
+	public int getAge(  ) {
 		return age;
 	}
 
