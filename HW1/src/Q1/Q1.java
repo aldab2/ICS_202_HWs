@@ -3,6 +3,7 @@
  * Name : Abdullah Barnawi
  * ID#:201549390
  */
+package Q1;
 
 import java.util.Random;
 

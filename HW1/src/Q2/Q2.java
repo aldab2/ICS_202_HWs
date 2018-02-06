@@ -1,7 +1,12 @@
+
 /*
  * Name : Abdullah Barnawi
  * ID#:201549390
  */
+
+
+package Q2;
+
 
 import java.util.Scanner;
 
