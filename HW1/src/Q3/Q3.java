@@ -3,6 +3,7 @@
  * Name : Abdullah Barnawi
  * ID#:201549390
  */
+package Q3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -355,7 +356,7 @@ abstract class Pet {
 		this.food = food;
 	}
 
-	public int getAge() {
+	public int getAge(  ) {
 		return age;
 	}
 
