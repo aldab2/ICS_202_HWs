@@ -142,6 +142,13 @@ public class SLL<T> {
 
     	
     }
+    public int length() {
+    	int cnt = 0;
+    	for(SLLNode<T> tmp = head;tmp!=null;tmp=tmp.next) {
+    		cnt++;
+    	}
+    	return cnt;
+    }
     public static void main(String...args) {
     	
     	SLL<Integer> arr = new SLL<>();
