@@ -1,5 +1,7 @@
 import java.util.*;
 public class TextEditer {
+	static boolean isNormalICommand ;
+	static boolean isEmptyICommand ;
 	 static SLL<String> lines ; 
 	 static Scanner myKeyb = new Scanner(System.in);
 	public static void main(String...strings) {
@@ -13,7 +15,15 @@ public class TextEditer {
 				System.out.println("This is an I command");
 				int iNumber =-1;
 				try {
-				iNumber = Integer.parseInt(command.substring(1));
+					if(isNormalICommand) {
+						iNumber = Integer.parseInt(command.substring(1));
+						lines.deleteAllFrom(iNumber);
+					
+					}
+					if(isEmptyICommand) {
+						lines.deleteAllFrom(lines.length());
+					}
+					
 				}
 				catch(Exception e) {
 					System.out.println(e.getMessage());
@@ -22,12 +32,23 @@ public class TextEditer {
 			
 			
 			// Case the enteredLine was normal.
+			else
 			lines.addToTail(enteredLine);
 			
 		}
 	
 	}
-	private static boolean isICommand(String enteredLine) {
-		return enteredLine.indexOf("I") == 0 && (Character.isDigit(enteredLine.charAt(1)) || Character.isDigit(enteredLine.charAt(1)));
+	private static boolean isICommand(String command) {
+		isEmptyICommand = false;
+		isNormalICommand = false;
+		if(command.indexOf("I") == 0 && command.length() ==1)  {
+			isEmptyICommand = true;
+			System.out.println("Empty Command");
+		}
+		else if(command.indexOf("I") == 0 && Character.isDigit(command.charAt(1))) {
+			isNormalICommand = true;
+			System.out.println("Normal Command");
+		}
+		return isEmptyICommand || isNormalICommand;
 	}
 }

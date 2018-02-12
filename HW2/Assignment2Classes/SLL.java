@@ -149,6 +149,26 @@ public class SLL<T> {
     	}
     	return cnt;
     }
+    public void deleteAllFrom(int n) {
+    	SLLNode<T> tmp = head;
+    	if(n==0 || n==1) {
+    		tail = head = null;
+    	}
+    	else if(n ==2) {
+    		head = tail;
+    		head.next = null;
+    		
+    	}
+    	else {
+    	for(int i=1; tmp!=null && i<n-1;tmp=tmp.next, i++);
+    	if(tmp == null) {
+    		System.out.println("\nCant Delete From more than the List. Nothing will happen");
+    		return;
+    	}
+    	tail = tmp;	
+    	tail.next= null;
+    	}
+    }
     public static void main(String...args) {
     	
     	SLL<Integer> arr = new SLL<>();
@@ -176,7 +196,9 @@ public class SLL<T> {
     	arr.insertAfter(new Integer(6), new Integer(6));
     	System.out.println();
     	arr.printAll();
-    	
+    	/*arr.deleteAllFrom(7);
+    	System.out.println();
+    	arr.printAll();*/
 
     }
 }
