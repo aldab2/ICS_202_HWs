@@ -1,3 +1,5 @@
+import com.sun.org.apache.xml.internal.resolver.helpers.Debug;
+
 /*package LinkedList;*/
 
 //**************************  SLL.java  *********************************
@@ -168,6 +170,62 @@ public class SLL<T> {
     	tail = tmp;	
     	tail.next= null;
     	}
+    }
+    public void delete( int n) {
+    	if(n > length()) {
+    		System.out.println("Worng Operation , Nothing Will be Cunducted N>Length()");
+    		return;
+    	}
+    	if(n== length() && n ==1) {
+    		head = tail = null;
+    	}
+    	if(n == length() && n!=1) {
+    		// delete last element
+    	}
+    	SLLNode<T> tmp;
+    	int i=1;
+    	for(tmp=head ;tmp!=null && i<n-1 ;tmp=tmp.next, i++);
+    		if(tmp ==null) {
+    		
+    			System.out.println("Unexpected Error");
+    			return;
+    		}
+    		else {
+    			tmp.next = tmp.next.next;
+    			if(tmp.next == null)
+    				tail = tmp.next;
+    		}
+    	
+    		
+    }
+    public void deleteAllFromTo(int  n, int m) {
+    	SLLNode<T> tmp = head;
+    	if( n > m) {
+    		System.out.println("Wrong Operation , Nothing Will happen N>M");
+    		return;
+    	}
+    	if(n == m ) {
+    		
+    		System.out.println("Deleteing one number");
+    		delete(n);
+    	}
+    	/*if(n==0 || n==1) {
+    		tail = head = null;
+    	}
+    	else if(n ==2) {
+    		head = tail;
+    		head.next = null;
+    		
+    	}
+    	else {
+    	for(int i=1; tmp!=null && i<n-1;tmp=tmp.next, i++);
+    	if(tmp == null) {
+    		System.out.println("\nCant Delete From more than the List. Nothing will happen");
+    		return;
+    	}
+    	tail = tmp;	
+    	tail.next= null;
+    	}*/
     }
     public static void main(String...args) {
     	
