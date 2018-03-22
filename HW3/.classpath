@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/abdullah/My_Java/ICS_202/172ICS202Assignment3Q2/jgrapht-1.1.0.zip"/>
+	<classpathentry kind="lib" path="antlr4-runtime-4.6.jar"/>
+	<classpathentry kind="lib" path="commons-lang3-3.5.jar"/>
+	<classpathentry kind="lib" path="jgraph-5.13.0.0.jar"/>
+	<classpathentry kind="lib" path="jgrapht-core-1.1.0.jar"/>
+	<classpathentry kind="lib" path="jgrapht-demo-1.1.0.jar"/>
+	<classpathentry kind="lib" path="jgrapht-ext-1.1.0-uber.jar"/>
+	<classpathentry kind="lib" path="jgrapht-ext-1.1.0.jar"/>
+	<classpathentry kind="lib" path="jgrapht-io-1.1.0-uber.jar"/>
+	<classpathentry kind="lib" path="jgrapht-io-1.1.0.jar"/>
+	<classpathentry kind="lib" path="jgraphx-2.0.0.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

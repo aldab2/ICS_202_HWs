@@ -1,5 +1,14 @@
 package Q1;
 
+
+/*
+ * Name : Abdullah Barnawi
+ * 
+ * ID#: 201549390
+ * 
+ */
+
+
 public class BalancedParentheses {
 	String inputStream;
 	LLStack prReader = new LLStack();
@@ -10,53 +19,7 @@ public class BalancedParentheses {
 		
 		return expression.replaceAll("[^{}\\[\\]()]", "");
 	}
-	/*public boolean readParanthesis(String expression, int i) {
-		char symbol = expression.charAt(i);
-		if(prReader.isEmpty() && (symbol==')' ||symbol=='}'  || symbol==']'  ))
-			return false;
-		if(prReader.isEmpty()) 
-		{
-			prReader.push(symbol);
-			return true;
-		}
-			
-		
-		if(prReader.topEl().equals('[')) {
-			if(symbol != ']')
-				return false;
-			prReader.pop();
-		}
-		else if(prReader.topEl().equals("{"))
-		{
-			if(symbol != '}')
-				return false;
-			prReader.pop();
-		}
-		else if(prReader.topEl().equals("("))
-		{
-			if(symbol != ')')
-				return false;
-			prReader.pop();
-		}
-		
-		return false;
-		
-	}
-	public boolean isValidExpression(String expression) {
-		String cleanExpresion = removeNonparanthesis(expression);
-		int i=0;
-		while( i<cleanExpresion.length()) {
-			if(!readParanthesis(cleanExpresion, i))
-				return false;
-			
-			i++;
-		}
-			
-		
-		
-		
-		return true ;
-	}*/
+	
 	public boolean isValidExpression(String expression) {
 		expression = removeNonparanthesis(expression);
 		int i=0;

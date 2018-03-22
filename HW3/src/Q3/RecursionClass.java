@@ -4,8 +4,8 @@ public class RecursionClass {
 static double sum=0;
 	 public static double addOverNs(int n){
 		 if(n==1)
-			 return 1.0;
-		 double number = 1/n;
+			 return 1;
+		 double number = 1.0/n;
 		 if(n%2==0)
 		 sum += number;
 		 else
@@ -32,6 +32,7 @@ static double sum=0;
 	public static void main(String...strings ) {
 		recursiveCubes(10);
 		cubes(10);
+		System.out.println(addOverNs(5));
 	}
 	 
 }
